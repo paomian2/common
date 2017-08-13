@@ -41,4 +41,9 @@ public class ResultUtil {
     public static Result error(ResultEnum resultEnum) {
         return new Result(resultEnum);
     }
+
+    @Override
+    public String toString() {
+        return GsonUtil.toJson(this);
+    }
 }
