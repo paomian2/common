@@ -1,6 +1,7 @@
 package com.hhx.bean;
 
 import com.hhx.enums.ResultEnum;
+import com.hhx.util.GsonUtil;
 
 /**
  * 返回值domain
@@ -51,4 +52,8 @@ public class Result<T> {
         this.data = data;
     }
 
+    @Override
+    public String toString() {
+        return GsonUtil.toJson(this);
+    }
 }

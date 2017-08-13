@@ -16,6 +16,10 @@ import java.util.Collection;
 
 public class ResultUtil {
 
+    public static StringBuilder buildString(Object object){
+        return new StringBuilder(build(object).toString());
+    }
+
     public static Result build(Object object) {
         if (object == null) {
             return error(ResultEnum.NO_DATA);
